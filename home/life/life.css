@@ -1,0 +1,270 @@
+* {
+    box-sizing:border-box;
+}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Playfair Display SC', serif;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+li {
+    list-style:none;
+}
+
+.header {
+    width:100%;
+    height:90px;
+    background:linear-gradient(125deg,#af7928,#8b2525);
+    opacity: 0.9;
+    color:white;
+    position:fixed;
+    top:0;
+    z-index:10;
+    box-shadow:0 2px 8px 4px rgb(71, 70, 70);
+}
+
+ul {
+    text-align:right;
+    padding:30px;
+    font-size:20px;
+}
+
+li {
+    display:inline-block;
+    margin-right:25px;
+}
+
+.header a {
+    display:block;
+    position:relative;
+    color:honeydew;
+    text-decoration: none;
+}
+
+.header a::before,
+.header a::after {
+  border-bottom: solid 2px honeydew;
+  bottom: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  width: 0;
+}
+
+.header a:hover::after {
+    width: 100%;
+  }
+
+.header a::before {
+   left: 50%;
+}
+.header a::after {
+   right: 50%;
+}
+.header a:hover::before,
+.header a:hover::after {
+  width: 50%;
+}
+
+.top-wrapper {
+    background-image: url(life.images/pexels-cottonbro-4056463.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:120vh;
+    -webkit-clip-path:polygon(0 0,100% 0,100% 90%,0 100%);
+    clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+}
+
+.top-wrapper h1 {
+    font-size:30px;
+    color:#4d3410;
+    float: right;
+    padding:560px 230px 0 0;
+} 
+
+.content1 {
+    position:relative;
+    padding: 35px 20px 15px;
+    margin: 100px 300px;
+    color: #af7928;
+    background-color: #e8f4fc;
+    box-shadow:0 2px 5px #999;
+    text-align:center;
+}
+
+.content1-title {
+    font-size:40px;
+    font-weight: bold;
+}
+
+.content1 h2 {
+    margin-top:33px;
+}
+
+.content1 p {
+    margin: 13px 0;
+    font-size: 20px;
+}
+
+.title-tape {
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    padding: 4px 20px;
+    color: #af7928;
+    font-weight: bold;
+    background-color: rgba(255,255,255,.1);
+    border-left: 2px dotted rgba(0,0,0,.1);
+    border-right: 2px dotted rgba(0,0,0,.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+    transform: rotate(-3deg);
+}
+
+.content2 {
+    background-color: rgba(219, 217, 217, 0.966);
+    color:white;
+    padding: 170px 0;
+    text-align:center;
+    -webkit-clip-path:polygon(0 0,100% 10%,100% 85%,0 100%);
+    clip-path: polygon(0 0,100% 10%,100% 85%,0 100%);
+}
+
+.box2 {
+ position: relative;
+ margin:0 370px;
+ padding:50px 0;
+ background-color: #fff; 
+ color: #af7928; 
+ border: 1px solid #ccc; 
+ box-shadow: 1px 1px 1px #acacac;
+}
+
+.box2::before {
+    position: absolute;
+    content: '';
+    top: -20px;
+    right: 20px;
+    height: 75px;
+    width: 15px;
+    border: 3px solid #818181; 
+    background-color: none;
+    border-radius: 12px;
+    box-shadow: 1px 1px 2px #999;
+    transform: rotate(10deg);
+    z-index: 1;
+}
+.box2::after {
+    position: absolute;
+    content: '';
+    top: 0px;
+    width: 10px; 
+    right: 20px;
+    border: solid 5px #fff;
+    z-index: 2;
+}
+
+.content2-title {
+    font-size:40px;
+    font-weight: bold;
+    border-style: none none solid;
+    border-color:#af7928 ; 
+    border-width: 3px;
+    display: inline-block;
+}
+
+.content2 h2 {
+    margin-top:33px;
+}
+
+.content2 p {
+    margin: 13px 0;
+    font-size: 20px;
+}
+
+.content3 {
+    text-align: center;
+    color:#5e4012;
+    font-weight: 500;
+    background-image: url(life.images/pexels-anna-shvets-4588013.jpg) , url(life.images/pexels-anna-shvets-4587991.jpg) , url(life.images/pexels-anna-shvets-4588006.jpg);
+    background-color: rgba(255, 255, 255, 0.46);
+    background-blend-mode: lighten;
+    background-position: right 88px top 170px, left 50px bottom 260px, right 50px bottom 10px;
+	background-size: 45% auto, 35% auto, 35% auto;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+content3 img {
+    height:500px;
+}
+
+.content3-title {
+    position: relative;
+    padding: 20px 0;
+    margin:0 490px;
+    background-color: white; /* ボックス背景色 */
+    font-size: 32px;
+    font-weight: 700;
+    color: #5e4012; /* 文章色 */
+    border: 2px solid #5e4012; /* 枠線 */
+    box-shadow: 4px 4px 4px rgb(168, 168, 168); /* 影の色 */
+}
+.content3-title::before {
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 20px;
+    height: 30px;
+    border: 1.5px solid #5e4012; /* ホチキス色 */
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px #333;
+    transform: rotate(45deg);
+}
+
+
+.tab {
+    position: relative;
+    margin:100px 375px;
+    padding:30px;
+    font-size: 20px;
+    background-color: rgb(250, 247, 241); /*BOX背景色 */
+    border: 5px solid #5e4012; /* 枠線の太さ・色 */
+}
+.tab-title {
+    position: absolute;
+    display: inline-block;
+    top: -35px; /*タブ調整 */
+    left: -5px; /*タブ調整 */
+    padding: 1px 16px;
+    height: 35px;
+    font-weight: bold;
+    color: white; /* タイトル色 */
+    background-color: #5e4012; /* タイトル背景色 */
+    border-radius: 8px 8px 0 0;
+    font-size:23px;
+}
+
+.info {
+    float:right;
+    margin:10px;
+}
+.info p,a {
+    color:#af7928;
+    text-decoration: none;
+    font-weight: bold;
+}
+.info a:hover {
+    color:rgb(97, 73, 13);
+}
+
